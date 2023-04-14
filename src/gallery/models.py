@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Image(models.Model):
-    image = models.ImageField('Изображение', upload_to='uploads/% Y/% m/% d/')
+    image = models.ImageField('Изображение', upload_to='uploads/')
     uploaded_time = models.DateTimeField('Дата добавления изображения', auto_now_add=True)
 
     class Meta:
@@ -12,15 +12,16 @@ class Image(models.Model):
         verbose_name_plural = 'Изоброжении'
 
     def __str__(self):
-        return self.image
+        return self.image.name
 
 
 class Gallery(models.Model):
-    images = models.ForeignKey(Image, on_delete=models.CASCADE)
+    name = models.CharField('Название галлереи', max_length=255, default='Галлерея')
+    images = models.ManyToManyField(Image)
 
     class Meta:
         verbose_name = 'Галлерея'
         verbose_name_plural = 'Галлерея'
 
     def __str__(self):
-        return self.images
+        return self.name
