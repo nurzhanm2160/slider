@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="web.mook.models.Course.objects" />
+          <option value="web.mook.models.TestContent.objects" />
+          <option value="web.mook.models.Bookmark.objects" />
+          <option value="web.mook.models.TestResult.objects" />
+          <option value="web.mook.models.QuestionSet.objects" />
+          <option value="web.mook.models.Answer.objects" />
+          <option value="web.mook.models.CourseReview.objects" />
+          <option value="web.mook.models.VideoContent.objects" />
+          <option value="web.mook.models.CompletedVideo.objects" />
+          <option value="web.mook.models.CompletedTests.objects" />
+          <option value="web.mook.models.Certificates.objects" />
+          <option value="web.mook.models.Course.DoesNotExist" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
