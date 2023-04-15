@@ -17,6 +17,7 @@ class Image(models.Model):
 
 class Gallery(models.Model):
     name = models.CharField('Название галлереи', max_length=255, default='Галлерея')
+    image = models.ImageField('Главная картинка', upload_to='uploads/')
     images = models.ManyToManyField(Image)
 
     class Meta:
